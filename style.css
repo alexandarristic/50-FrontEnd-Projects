@@ -1,0 +1,102 @@
+/*------------------*/
+/*    FONT IMPORT   */
+/*------------------*/
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/*------------------*/
+/*    BASIC SETUP   */
+/*------------------*/
+html{
+  font-size: 16px;
+  font-family: "Muli","Arial",sans-serif;
+  color: #000;
+  text-transform: capitalize;
+  text-rendering: optimizeLegibility;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*------------------*/
+/*    CONTAINER     */
+/*------------------*/
+
+/*By default, any children
+of a flex container are
+placed as a flex row (flex-direction = row) */
+
+.container{
+  display:flex;
+  width: 90vw;
+}
+
+/*------------------*/
+/*      PANELS      */
+/*------------------*/
+.panel{
+  font-size: 1.1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 25px;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  color: #fff;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  opacity: 0;
+}
+
+#main{
+    background-image: url("https://149366112.v2.pressablecdn.com/wp-content/uploads/2019/03/shutterstock_1693785667-scaled.jpg");
+}
+
+.active{
+  flex: 3;
+}
+
+.active h3{
+  opacity: 1;
+}
+
+/* Display only 3 elements when
+screen is small (<480 px) */
+@media(max-width: 480px){
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(3),
+  .panel:nth-of-type(4){
+    display: none;
+  }
+}
+
+.one{
+  background-image: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F765877054%2F960x0.jpg%3Ffit%3Dscale");
+}
+
+.two{
+  background-image: url("https://www.seriouseats.com/2018/10/20181015-state-of-slice-delmar-clay-williams-625x469.jpg");
+}
+
+.three{
+  background-image: url("https://www.ctvnews.ca/polopoly_fs/1.5063738.1597360423!/httpImage/image.jpg_gen/derivatives/landscape_1020/image.jpg");
+}
+
+.four{
+  background-image: url("https://static.wixstatic.com/media/eb1394_d3dd074df932433db47dfa93a06c9493~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_90/eb1394_d3dd074df932433db47dfa93a06c9493~mv2.jpg");
+}
